@@ -16,7 +16,7 @@ export async function getPokemonDetail(pokemon: { url: string }): Promise<Pokemo
     return convertPokeApiDetailToPokemon(pokeDetail);
 }
 
-export async function getPokemons(offset = 0, limit = 5): Promise<Pokemon[]> {
+export async function getPokemons(offset = 0, limit = 0): Promise<Pokemon[]> {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
     const response = await fetch(url);
     const jsonBody: PokeApiResponse = await response.json();
