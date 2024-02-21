@@ -1,3 +1,72 @@
+.water {
+    background-color: #6390F0;
+}
+
+.fire {
+    background-color: #FF7F0F;
+}
+
+.grass {
+    background-color: #7AC74C;
+}
+
+.electric {
+    background-color: #F7D02C;
+}
+
+.ice {
+    background-color: #96D9D6;
+}
+
+.fighting {
+    background-color: #C03028;
+}
+
+.poison {
+    background-color: #A040A0;
+}
+
+.ground {
+    background-color: #E0C068;
+}
+
+.flying {
+    background-color: #A890F0;
+}
+
+.psychic {
+    background-color: #F85888;
+}
+
+.bug {
+    background-color: #A8B820;
+}
+
+.rock {
+    background-color: #B8A038;
+}
+
+.ghost {
+    background-color: #705898;
+}
+
+.dragon {
+    background-color: #7038F8;
+}
+
+.dark {
+    background-color: #705848;
+}
+
+.steel {
+    background-color: #B8B8D0;
+}
+
+.fairy {
+    background-color: #EE99AC;
+}
+
+
 .tittle-home {
     font-size: 3rem;
     font-weight: bolder;
@@ -6,10 +75,11 @@
 
 .pokemon-list {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100%; 
+    width: 100%;
+    gap: 2rem;
 }
 
 .pokemon-card {
@@ -17,20 +87,67 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    width: 45%; 
-    padding: 1rem; 
+    width: 45%;
+    padding: 1rem;
     box-sizing: border-box;
+    max-width: 16rem;
+    max-height: 8rem;
+    border-radius: 1.5rem;
 }
 
-.pokemon-img{
+.pokemon-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pokemon-name {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.pokemon-type {
+    border-color: ghostwhite;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(255, 255, 255, 0.7);
+    color: rgb(105, 105, 105);
+    border-radius: 1rem;
+    padding: 0.15rem;
+    text-align: center;
+}
+
+.pokemon-img {
     padding: 0.5rem;
     max-width: 100%;
     max-height: 100%;
 }
 
-.button-load-more{
-    padding: 1rem;
+.button-load-more {
+    padding: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button-load{
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background-color: #A040A0;
+    color: ghostwhite;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        margin: auto;
+        max-width: 80rem;
+        background-color: ghostwhite;
+        border-radius: 2rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .tittle-home{
+        padding-left: 5rem;
+    }
 }

@@ -7,7 +7,7 @@ export function PokemonList() {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
     const [offset, setOffset] = useState(0);
     const [isExpanded, setIsExpanded] = useState(false);
-    const limit = 10;
+    const limit = 12;
     const maxRecords = 200;
 
     useEffect(() => {
@@ -37,40 +37,26 @@ export function PokemonList() {
     };
 
     return (
-        <main>
+        <main className="main">
             <h1 className='tittle-home'><strong>Pokedex</strong></h1>
             <ul className='pokemon-list'>
                 {pokemonList.map((pokemon, index) => (
-                    <li key={index} className='pokemon-card' onClick={handleCardClick}>
-                        {isExpanded ? (
-                            <section className="pokemon-info">
-                                <p>{pokemon.name}</p>
-                                <p>{pokemon.type}</p>
-                                <ul>
-                                    {pokemon.stats.map((stat, statIndex) => (
-                                        <li key={statIndex}>
-                                            {stat.name}: {stat.baseStat}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
-                        ) : (
-                            <section className="pokemon-info">
-                                <p>{pokemon.name}</p>
-                                {pokemon.types.map((type, typeIndex) => (
-                                    <p key={typeIndex}>{type}</p>
-                                ))}
-                            </section>
-                        )}
+                    <li key={index} className={`pokemon-card ${pokemon.types.join(" ")}`} onClick={handleCardClick}>
+                        <section className="pokemon-info">
+                            <p className="pokemon-name">{pokemon.name}</p>
+                            {pokemon.types.map((type, typeIndex) => (
+                                <p key={typeIndex} className={`pokemon-type ${pokemon.types.join(" ")}`}>{type}</p>
+                            ))}
+                        </section>
                         <Link to={`/pokemon/${pokemon.name}`}>
-                            <img src={pokemon.photo} alt={pokemon.name} className="pokemon-img"/>
+                            <img src={pokemon.photo} alt={pokemon.name} className="pokemon-img" />
                         </Link>
                     </li>
                 ))}
             </ul>
             <section className="button-load-more">
                 {offset + limit < maxRecords && (
-                    <button id="loadMoreButton" onClick={handleLoadMore}>Load More</button>
+                    <button id="loadMoreButton" onClick={handleLoadMore} className="button-load">Load More</button>
                 )}
             </section>
         </main>
