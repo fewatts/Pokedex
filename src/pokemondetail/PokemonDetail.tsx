@@ -45,6 +45,7 @@ export function PokemonDetail() {
                             ))}
                         </ul>
                     </section>
+                    <br /><br /><br /><br /><br /><br /><br /><br />
                 </section>
             )}
         </main>

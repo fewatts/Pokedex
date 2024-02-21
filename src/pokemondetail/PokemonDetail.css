@@ -132,3 +132,26 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (min-width: 1024px) {
+    .main-detail {
+        margin: auto;
+        max-width: 80rem;
+        background-color: ghostwhite;
+        border-radius: 2rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .tittle-home{
+        padding-left: 5rem;
+    }
+
+    .pokemon-list{
+        gap: 1.5rem;
+    }
+
+    .pokemon-infos {
+        justify-content: space-evenly;
+    }
+}
