@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getPokemonDetail } from "../service/Service";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import './PokemonDetail.css';
 
 interface Pokemon {
     name: string;
@@ -26,25 +27,25 @@ export function PokemonDetail() {
     }, [params.pokemonname]);
 
     return (
-        <main>
-            <h1 className='tittle-home'><strong>{pokemon?.name}</strong></h1>
+        <main className="main-detail">
+            <section className="header">
+                <Link to="/"><button className={`button-back  ${pokemon?.types.join(" ")}`}>Back</button></Link>
+                <h1 className={`tittle-detail ${pokemon?.types.join(" ")}`}><strong>{pokemon?.name}</strong></h1>
+            </section>
             {pokemon && (
-                <ul className='pokemon-list'>
-                    <li className='pokemon-card'>
-                        <section className="pokemon-info">
-                            <p>{pokemon.name}</p>
-                            <p>{pokemon.types.join(", ")}</p>
-                            <ul>
-                                {pokemon.stats.map((stat, statIndex) => (
-                                    <li key={statIndex}>
-                                        {stat.name}: {stat.baseStat}
-                                    </li>
-                                ))}
-                            </ul>
-                        </section>
-                        <img src={pokemon.photo} alt={pokemon.name} />
-                    </li>
-                </ul>
+                <section className={`main-info ${pokemon?.types.join(" ")}`}>
+                    <picture className="img-detail"><img src={pokemon.photo} alt={pokemon.name} /></picture>
+                    <section className="pokemon-infos">
+                        <p className="info-one">{pokemon.types.join(", ")}</p>
+                        <ul className="info-two">
+                            {pokemon.stats.map((stat, statIndex) => (
+                                <li key={statIndex}>
+                                    {stat.name}: {stat.baseStat}
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                </section>
             )}
         </main>
     );

@@ -1,0 +1,134 @@
+.water {
+    background-color: #6390F0;
+}
+
+.fire {
+    background-color: #FF7F0F;
+}
+
+.grass {
+    background-color: #7AC74C;
+}
+
+.electric {
+    background-color: #F7D02C;
+}
+
+.ice {
+    background-color: #96D9D6;
+}
+
+.fighting {
+    background-color: #C03028;
+}
+
+.poison {
+    background-color: #A040A0;
+}
+
+.ground {
+    background-color: #E0C068;
+}
+
+.flying {
+    background-color: #A890F0;
+}
+
+.psychic {
+    background-color: #F85888;
+}
+
+.bug {
+    background-color: #A8B820;
+}
+
+.rock {
+    background-color: #B8A038;
+}
+
+.ghost {
+    background-color: #705898;
+}
+
+.dragon {
+    background-color: #7038F8;
+}
+
+.dark {
+    background-color: #705848;
+}
+
+.steel {
+    background-color: #B8B8D0;
+}
+
+.fairy {
+    background-color: #EE99AC;
+}
+
+.button-back {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: ghostwhite;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.tittle-detail {
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: ghostwhite;
+}
+
+.main-info {
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.pokemon-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-direction: row;
+}
+
+.info-one {
+    border: solid rgba(248, 248, 255, 0.168);
+    background-color: rgba(255, 255, 255, 0.216);
+    box-shadow: rgba(255, 255, 255, 0.7);
+    color: ghostwhite;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.info-two {
+    border: solid rgba(248, 248, 255, 0.168);
+    background-color: rgba(255, 255, 255, 0.216);
+    box-shadow: rgba(255, 255, 255, 0.7);
+    color: ghostwhite;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: right;
+}
+
+.img-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

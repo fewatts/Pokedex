@@ -6,7 +6,6 @@ import './PokemonList.css';
 export function PokemonList() {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
     const [offset, setOffset] = useState(0);
-    const [isExpanded, setIsExpanded] = useState(false);
     const limit = 12;
     const maxRecords = 200;
 
@@ -32,10 +31,6 @@ export function PokemonList() {
         setOffset(prevOffset => prevOffset + limit);
     };
 
-    const handleCardClick = () => {
-        setIsExpanded(!isExpanded);
-    };
-
     return (
         <main className="main">
             <Link to="/" className="link">
@@ -43,7 +38,7 @@ export function PokemonList() {
             </Link>
             <ul className='pokemon-list'>
                 {pokemonList.map((pokemon, index) => (
-                    <li key={index} className={`pokemon-card ${pokemon.types.join(" ")}`} onClick={handleCardClick}>
+                    <li key={index} className={`pokemon-card ${pokemon.types.join(" ")}`}>
                         <section className="pokemon-info">
                             <p className="pokemon-name">{pokemon.name}</p>
                             {pokemon.types.map((type, typeIndex) => (
