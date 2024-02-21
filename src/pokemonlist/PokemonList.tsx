@@ -38,7 +38,9 @@ export function PokemonList() {
 
     return (
         <main className="main">
-            <h1 className='tittle-home'><strong>Pokedex</strong></h1>
+            <Link to="/" className="link">
+                <h1 className='tittle-home'><strong>Pokedex</strong></h1>
+            </Link>
             <ul className='pokemon-list'>
                 {pokemonList.map((pokemon, index) => (
                     <li key={index} className={`pokemon-card ${pokemon.types.join(" ")}`} onClick={handleCardClick}>

@@ -71,6 +71,11 @@
     font-size: 3rem;
     font-weight: bolder;
     padding: 2rem 0rem 2rem 2rem;
+    color: black;
+}
+
+.link{
+    text-decoration: none;
 }
 
 .pokemon-list {
@@ -79,7 +84,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .pokemon-card {
@@ -91,7 +96,8 @@
     padding: 1rem;
     box-sizing: border-box;
     max-width: 16rem;
-    max-height: 8rem;
+    min-height: 10rem;
+    max-height: 10rem;
     border-radius: 1.5rem;
 }
 
@@ -150,5 +156,9 @@
 
     .tittle-home{
         padding-left: 5rem;
+    }
+
+    .pokemon-list{
+        gap: 1.5rem;
     }
 }
