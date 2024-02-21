@@ -5,12 +5,12 @@ import './PokemonList.css';
 export function PokemonList() {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
     const [offset, setOffset] = useState(0);
-    const limit = 10; // Defina um valor apropriado para limit
+    const limit = 10;
     const maxRecords = 200;
 
     useEffect(() => {
         loadPokemonItems(offset, limit);
-    }, [offset, limit]); // Certifique-se de incluir 'limit' como uma dependência do useEffect
+    }, [offset, limit]);
 
     const loadPokemonItems = async (offset: number, limit: number) => {
         const newPokemons = await getPokemons(offset, limit);
@@ -32,12 +32,14 @@ export function PokemonList() {
 
     return (
         <main>
-            <h1 className='tittle-home'>Pokedex</h1>
+            <h1 className='tittle-home'><strong>Pokedex</strong></h1>
             <ul className='pokemon-list'>
                 {pokemonList.map((pokemon, index) => (
                     <li key={index} className='pokemon-card'>
-                        <p>{pokemon.name}</p>
-                        <p>{pokemon.type}</p>
+                        <section className="pokemon-info">
+                            <p>{pokemon.name}</p>
+                            <p>{pokemon.type}</p>
+                        </section>
                         <img src={pokemon.photo} alt={pokemon.name} className='pokemon-img' />
                     </li>
                 ))}
