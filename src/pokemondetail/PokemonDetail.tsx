@@ -34,7 +34,7 @@ export function PokemonDetail() {
             </section>
             {pokemon && (
                 <section className={`main-info ${pokemon?.types.join(" ")}`}>
-                    <picture className="img-detail"><img src={pokemon.photo} alt={pokemon.name} /></picture>
+                    <picture className="img-detail"><img src={pokemon.photo} alt={pokemon.name} className="img-poke"/></picture>
                     <section className="pokemon-infos">
                         <p className="info-one">{pokemon.types.join(", ")}</p>
                         <ul className="info-two">

@@ -69,12 +69,12 @@
 
 .tittle-home {
     font-size: 3rem;
-    font-weight: bolder;
+    font-weight: 600;
     padding: 2rem 0rem 2rem 2rem;
-    color: black;
+    color: rgb(85, 85, 85);
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
@@ -136,12 +136,17 @@
     align-items: center;
 }
 
-.button-load{
+.button-load {
+    cursor: pointer;
     font-size: 1.5rem;
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: #A040A0;
     color: ghostwhite;
+}
+
+.button-load:hover {
+    background-color: #682b68;
 }
 
 @media screen and (min-width: 1024px) {
@@ -154,11 +159,11 @@
         margin-top: 1rem;
     }
 
-    .tittle-home{
+    .tittle-home {
         padding-left: 5rem;
     }
 
-    .pokemon-list{
+    .pokemon-list {
         gap: 1.5rem;
     }
 }
