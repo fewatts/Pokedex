@@ -38,7 +38,9 @@ export function PokemonList() {
                     <li key={index} className='pokemon-card'>
                         <section className="pokemon-info">
                             <p>{pokemon.name}</p>
-                            <p>{pokemon.type}</p>
+                            {pokemon.types.map((type, typeIndex) => (
+                                <p key={typeIndex}> {type}</p>
+                            ))}
                         </section>
                         <img src={pokemon.photo} alt={pokemon.name} className='pokemon-img' />
                     </li>
