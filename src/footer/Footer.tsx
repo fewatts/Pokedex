@@ -5,7 +5,7 @@ export function Footer() {
     return (
 
         <footer className="footer">
-            <img src={github} alt="githublogo" className="img-footer"/>
+            <a href="https://github.com/fewatts"><img src={github} alt="githublogo" className="img-footer"/></a>
         </footer>
     );
 }

@@ -111,10 +111,11 @@
     justify-content: space-around;
     padding: 1rem;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .info-one {
+    font-size: 2rem;
     border: solid rgba(248, 248, 255, 0.168);
     background-color: rgba(255, 255, 255, 0.216);
     box-shadow: rgba(255, 255, 255, 0.7);
@@ -125,6 +126,7 @@
 }
 
 .info-two {
+    font-size: 2rem;
     border: solid rgba(248, 248, 255, 0.168);
     background-color: rgba(255, 255, 255, 0.216);
     box-shadow: rgba(255, 255, 255, 0.7);

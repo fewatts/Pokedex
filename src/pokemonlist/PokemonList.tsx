@@ -7,7 +7,7 @@ export function PokemonList() {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
     const [offset, setOffset] = useState(0);
     const limit = 12;
-    const maxRecords = 200;
+    const maxRecords = 500;
 
     useEffect(() => {
         loadPokemonItems(offset, limit);
